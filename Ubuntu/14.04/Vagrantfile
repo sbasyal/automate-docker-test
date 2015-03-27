@@ -7,7 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define :docker1 do |docker1|
         docker1.vm.box = "docker-box-1"
         docker1.vm.box_url = "http://files.vagrantup.com/precise64.box"
-        docker1.vm.network "forwarded_port", guest: 80, host:58061
-        docker1.vm.network "forwarded_port", guest: 4243, host: 4261
+        docker1.vm.network "forwarded_port", guest: 80, host:58062
+        docker1.vm.network "forwarded_port", guest: 4243, host: 4262
     end
  end

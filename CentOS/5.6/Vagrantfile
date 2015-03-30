@@ -1,0 +1,13 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+    config.vm.define :dockerCOS56 do |dockerCOS56|
+        dockerCOS56.vm.box = "docker-box-CentOS-5.6"
+        dockerCOS56.vm.box_url = "http://yum.mnxsolutions.com/vagrant/centos_56_32.box"
+        dockerCOS56.vm.network "forwarded_port", guest: 80, host:58064
+        dockerCOS56.vm.network "forwarded_port", guest: 4243, host: 4264
+    end
+ end

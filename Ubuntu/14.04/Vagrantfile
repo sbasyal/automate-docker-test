@@ -10,4 +10,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         docker1.vm.network "forwarded_port", guest: 80, host:58064
         docker1.vm.network "forwarded_port", guest: 4243, host: 4264
     end
+    config.vm.provision :shell, path: "bootstrap.sh"
  end

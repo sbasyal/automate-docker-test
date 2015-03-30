@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-yum install wget -y
+sudo yum update -y && yum install docker-io -y
+sudo service docker start
+sudo chkconfig docker on
